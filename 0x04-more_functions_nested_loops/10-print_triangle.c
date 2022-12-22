@@ -1,20 +1,29 @@
 #include "main.h"
 /**
-* _strcpy - Copy paste string
-*@dest: destination
-*@src: source
-*Return: dest
+*print_triangle - prints a triangle
+*@size:size parameter of triangle
+*Return:returns nothing
 */
-char *_strcpy(char *dest, char *src)
+void print_triangle(int size)
 {
-	int inc = 0;
+	int inc1, inc2;
 
-	while (*(src + inc) != '\0')
+	if (size > 0)
 	{
-		*(dest + inc) = *(src + inc);
-		inc++;
+		for (inc1 = 1; inc1 <= size; inc1++)
+		{
+			for ((inc2 = size - inc1); inc2 > 0; inc2--)
+				_putchar(' ');
+
+				for (inc2 = 0; inc2 < inc1; inc2++)
+					_putchar('#');
+
+					if (inc1 == size)
+						continue;
+
+			_putchar('\n');
+		}
 	}
 
-	*(dest + inc) = '\0';
-	return (dest);
+	_putchar('\n');
 }
