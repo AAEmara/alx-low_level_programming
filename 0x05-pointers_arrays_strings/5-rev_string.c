@@ -10,6 +10,7 @@
 void rev_string(char *s)
 {
 	int i = 0, length;
+
 	length = _strlen(s) - 1;
 
 	while (length > i)
@@ -31,6 +32,7 @@ void rev_string(char *s)
 int _strlen(char *s)
 {
 	int count, inc;
+	
 	inc = 0;
 
 	for (count = 0; s[count] != '\0'; count++)
