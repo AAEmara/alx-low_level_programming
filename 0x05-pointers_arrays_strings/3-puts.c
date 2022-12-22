@@ -4,8 +4,6 @@
  *
  *@str: string to print
  *
- *
- *
  *Description: prints a string
  *
  *On success: return the number of characters printed
@@ -17,6 +15,4 @@ void _puts(char *str)
 		putchar(*str++);
 	
 	putchar('\n');
-
-
 }
