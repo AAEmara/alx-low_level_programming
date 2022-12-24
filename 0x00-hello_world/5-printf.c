@@ -2,9 +2,9 @@
 /**
 *main - Entry point
 *
-*Description - Prints a statement using printf function
+*Description: Prints a statement using printf function
 *
-*Return : Always 0 (Success)
+*Return: Always 0 (Success)
 */
 
 int main(void)
