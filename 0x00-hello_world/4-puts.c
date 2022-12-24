@@ -10,6 +10,8 @@
 
 int main(void)
 {
-	printf("Programming is like building a multilingual puzzle\n");
+	char statment[] = "\"Programming is like building a multilingual puzzle";
+
+	puts(statment);
 	return (0);
 }
