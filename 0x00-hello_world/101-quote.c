@@ -3,7 +3,7 @@
 /**
 *main - Entry Point
 *
-*Description: Prints out a set of characters using putchar
+*Description: Prints out a statement using write function
 *
 *Return: Always (1) (stdrr)
 */
