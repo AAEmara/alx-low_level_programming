@@ -3,7 +3,7 @@
 /**
 * main - Entry point of the program.
 *
-* Decscription: Prints the alphabet in lowercase.
+* Decscription: Prints the alphabet in lowercase, and uppercase.
 *
 * Return: Always 0 (Success)
 */
