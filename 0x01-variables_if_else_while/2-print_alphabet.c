@@ -1,21 +1,22 @@
 #include <stdio.h>
 
-#include <ctype.h>
-
 /**
- *main - Program to print alphabet letter followed by new line
- *
- *Return: return 0
- */
-
+* main - Entry point of the program.
+*
+* Decscription: Prints the alphabet in lowercase.
+*
+* Return: Always 0 (Success)
+*/
 int main(void)
 {
-	int letter;
+	int i;
 
-	for (letter = 'a'; letter <= 'z'; letter++)
+	i = 96;
+
+	while (i <122)
 	{
-		letter = tolower(letter);
-		putchar(letter);
+		i = ++i;
+		putchar(i);
 	}
 
 	putchar('\n');
