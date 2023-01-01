@@ -19,7 +19,7 @@ int main(void)
 		putchar(i);
 	}
 
-	i = 69;
+	i = 64;
 
 	while (i < 90)
 	{
