@@ -1,20 +1,25 @@
 #include <stdio.h>
-#include <ctype.h>
+
 /**
- *main - Program to print alphabet letters in reverse followed by new line
- *
- *Return: return 0
- *
- */
+* main - Entry point of the program.
+*
+* Decscription: Prints the alphabet in lowercase (reverse order).
+*
+* Return: Always 0 (Success)
+*/
 int main(void)
 {
-	int letter;
+	int i;
 
-	for (letter = 'z'; letter >= 'a'; letter--)
+	i = 122;
+
+	while (i > 96)
 	{
-		putchar(letter);
+		putchar(i);
+		--i;
 	}
 
 	putchar('\n');
 	return (0);
 }
+
