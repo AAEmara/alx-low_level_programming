@@ -6,7 +6,7 @@
 * Description: Prints numbers from [0-9] and lowercase chars from [a-f]
 * using base 16 only.
 *
-* Retrun: Always 0 (Success)
+* Return: Always 0 (Success)
 */
 int main(void)
 {
@@ -17,7 +17,7 @@ int main(void)
 	while (i < 57)
 	{
 		i++;
-		putchar( i);
+		putchar(i);
 	}
 
 	i = 96;
