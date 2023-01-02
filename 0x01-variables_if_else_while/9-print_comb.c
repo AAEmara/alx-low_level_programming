@@ -1,26 +1,28 @@
 #include <stdio.h>
-#include <ctype.h>
+
 /**
- *main - Prints all single digits with , and space followed by new line
- *
- *Return: returns 0
- *
- */
+* main - Entry point of the program.
+*
+* Description: Prints numbers [0-9] separated by ','.
+*
+* Return: Always 0 (Success)
+*/
 int main(void)
 {
-	int digit;
+	int i;
 
-	for (digit = '0'; digit <= '9'; digit++)
+	i = 48;
+
+	while (i <= 57)
 	{
-		putchar(digit);
+		putchar(i);
 
-		if (digit == '9')
+		if ( i != 57)
 		{
-			continue;
+			putchar(',');
+			putchar(' ');
 		}
-
-		putchar(',');
-		putchar(' ');
+		i++;
 	}
 
 	putchar('\n');
