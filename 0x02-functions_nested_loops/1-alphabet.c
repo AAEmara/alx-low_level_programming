@@ -4,6 +4,22 @@
 void print_alphabet(void);
 
 /**
+* main - Entry point of the program.
+*
+* @parameter: No parameters are used.
+*
+* Description: Prints the alphabets in lowercase in ascending order
+* by calling the print_alphabet() function.
+*
+* Return: Always 0 (Success).
+*/
+int main(void)
+{
+	print_alphabet();
+	return (0);
+}
+
+/**
 * print_alphabet - A function that prints alphabets in lowercase format.
 *
 * @parameters: No parameters are used.
@@ -29,18 +45,4 @@ void print_alphabet(void)
 	return;
 }
 
-/**
-* main - Entry point of the program.
-*
-* @parameter: No parameters are used.
-*
-* Description: Prints the alphabets in lowercase in ascending order
-* by calling the print_alphabet() function.
-*
-* Return: Always 0 (Success).
-*/
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
+
