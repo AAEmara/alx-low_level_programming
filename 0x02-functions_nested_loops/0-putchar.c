@@ -1,20 +1,34 @@
-#include "main.h"
+#include <stdio.h>
+
+int _putchar();
+
 /**
-*main - function prints text as output
+* _putchar - A function that outputs "_putchar" followed by newline.
 *
-*Return:return 0
+* @parameter: No parameters used.
+*
+* Description: This function is used to print the statement "_putchar"
+* followed by a newline "\n" whenever the function is invoked.
+*
+* Return: Always 0 (Success).
+*/
+int _putchar()
+{
+	printf("_putchar\n");
+	return (0);
+}
+
+/**
+* main - Entry point of the program.
+*
+* @parameter: No parameters used.
+*
+* Description: This function calls the _putchar function.
+*
+* Return: Always 0 (Success).
 */
 int main(void)
 {
-	char school[10] = "_putchar";
-
-	int i;
-
-	for (i = 0; i < 8; i++)
-	{
-		_putchar(school[i]);
-	}
-
-	_putchar(10);
+	_putchar();
 	return (0);
 }
