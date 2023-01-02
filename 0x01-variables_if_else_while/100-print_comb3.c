@@ -32,7 +32,7 @@ int main(void)
 		if (j > 57)
 		{
 			i++;
-			j = i+ 1;
+			j = i + 1;
 		}
 	}
 
