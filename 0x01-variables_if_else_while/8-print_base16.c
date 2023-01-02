@@ -1,28 +1,31 @@
 #include <stdio.h>
-#include <ctype.h>
+
 /**
- *main - Prints all single digits of base 16 followed by new line
- *
- *Return: returns 0
- *
- */
+* main - Entry point of the program.
+*
+* Description: Prints numbers from [0-9] and lowercase chars from [a-f]
+* using base 16 only.
+*
+* Retrun: Always 0 (Success)
+*/
 int main(void)
 {
-	int digit;
+	int i;
 
-	for (digit = '0'; digit <= '9'; digit++)
+	i = 47;
+
+	while (i < 57)
 	{
-		putchar(digit);
+		i++;
+		putchar( i);
+	}
 
-		if (digit == '9')
-		{
-			digit = 'a';
-			for (; digit <= 'f'; digit++)
-			{
-				putchar(digit);
-			}
-			break;
-		}
+	i = 96;
+
+	while (i < 102)
+	{
+		i++;
+		putchar(i);
 	}
 
 	putchar('\n');
