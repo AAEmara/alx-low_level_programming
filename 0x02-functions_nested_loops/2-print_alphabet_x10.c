@@ -12,9 +12,16 @@ void print_alphabet_x10(void)
 
 	i = 0;
 
-	while (i < 9)
+	while (i < 10)
 	{
-		print_alphabet();
-		i++;
+		int c;
+
+		c = 96;
+
+		while (c < 122)
+		{
+			c++;
+			putchar(c);
+		}
 	}
 }
