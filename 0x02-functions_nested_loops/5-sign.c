@@ -1,26 +1,29 @@
 #include "main.h"
+
 /**
-*print_sign-prints sign of a number
-*@n: character to be verified
-*Return: return 0 or 1
+* print_sign - Prints the sign of the given number.
+*
+* @n: Integer type parameter that will be checked by print_sign function.
+*
+* Return: returns 0 or 1 or -1.
 */
 int print_sign(int n)
 {
-	if (n == 0)
+	if (n > 0)
 	{
-		_putchar('0');
-		return (0);
-	}
-
-	else if (n > 0)
-	{
-		_putchar('+');
+		putchar('+');
 		return (1);
 	}
 
-	else
+	else if (n == 0)
 	{
-		_putchar('-');
+		putchar('0');
+		return (0);
+	}
+
+	else if (n < 0)
+	{
+		putchar('-');
 		return (-1);
 	}
 }
