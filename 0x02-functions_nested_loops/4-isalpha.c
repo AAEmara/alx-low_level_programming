@@ -4,7 +4,7 @@
 * _isalpha - Checks if the char is a lowercase or uppercase letter.
 *
 * @c: Character type parameter to be checked by _isalpha function.
-* Retrun: returns 0 or 1.
+* Return: returns 0 or 1.
 */
 int _isalpha(int c)
 {
