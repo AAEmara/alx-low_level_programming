@@ -1,17 +1,16 @@
 #include "main.h"
+
 /**
-* _abs - prints the absolute value of a number
-*@i: number targeted
-*Return: returns 0
+* _abs - Converts the given number to its absolute value.
+*
+* @num: Integer value parameter.
+*
+* Return: 0 or positive number.
 */
-int _abs(int i)
+int _abs(int num)
 {
-	if (i > 0)
-		return (i);
-
-	else if (i < 0)
-		return (-i);
-
+	if (num < 0)
+		return (-num);
 	else
-		return (0);
+		return(num);
 }
