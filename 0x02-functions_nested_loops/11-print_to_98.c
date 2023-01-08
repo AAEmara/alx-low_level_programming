@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* print_to_98 - Prints all natural numbers from given integer number to 98. 
+* print_to_98 - Prints all natural numbers from given integer number to 98.
 *
 * @n: Integer Type parameter used by print_to_98 function to start counting.
 *
@@ -13,19 +13,22 @@ void print_to_98(int n)
 	{
 		while (n != 98)
 		{
-			printf("%d", n);
+			printf("%d, ", n);
 			n++;
 		}
-		printf("%d", n);
+		printf("%d\n", n);
 	}
+
+	else if (n == 98)
+		printf("%d\n", n);
 
 	else
 	{
 		while (n != 98)
 		{
-			printf("%d", n);
+			printf("%d, ", n);
 			n--;
 		}
-		printf("%d", n);
+		printf("%d\n", n);
 	}
 }
