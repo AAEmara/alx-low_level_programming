@@ -25,7 +25,7 @@ void jack_bauer(void)
 				printf("%d:0%d", hour, min);
 
 			else if (min > 9 && hour <= 9)
-				printf("0%d:%d");
+				printf("0%d:%d", hour, min);
 
 			else
 				printf("%d:%d", hour, min);
