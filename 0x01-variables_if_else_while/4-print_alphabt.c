@@ -11,7 +11,7 @@ int main(void)
 {
 	char start = 'a';
 
-	for (; start < 'z'; start++)
+	for (; start <= 'z'; start++)
 	{
 		if ((start == 'q') | (start == 'e'))
 			continue;
