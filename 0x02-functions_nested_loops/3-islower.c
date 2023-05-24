@@ -5,7 +5,7 @@
  *
  * @c: Integer value of the character used to be checked in function.
  *
- * Return: 0 on Success.
+ * Return: 1 if lowercase and 0 otherwise.
  */
 
 int _islower(int c)
