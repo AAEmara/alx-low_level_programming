@@ -2,7 +2,7 @@
 
 /**
  * reset_to_98 - Updates the value the pointer  points to, to 98.
- * @*n: Pointer to an Integer value parameter.
+ * @n: Pointer to an Integer value parameter.
  *
  * Return: Nothing.
  */
