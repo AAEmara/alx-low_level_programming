@@ -11,16 +11,31 @@
 void rev_string(char *s)
 {
 	int len = _strlen(s) - 1;
-	int stop = (len + 1) / 2;
+	int stop = (len) / 2;
 	int i;
 	char tmp;
 
-	for (i = 0; i <= stop; i++)
+	/* Taking into consideration the odd string length */
+	if (len % 2 == 0)
 	{
-		tmp = s[i];
-		s[i] = s[len];
-		s[len] = tmp;
-		len--;
+		for (i = 0; i <= stop; i++)
+		{
+			tmp = s[i];
+			s[i] = s[len];
+			s[len] = tmp;
+			len--;
+		}
+	}
+	/* Taking into consideration the even string length */
+	else if (len % 2 == 1)
+	{
+		for (i = 0; i < (stop + 1); i++)
+		{
+			tmp = s[i];
+			s[i] = s[len];
+			s[len] = tmp;
+			len--;
+		}
 	}
 }
 
