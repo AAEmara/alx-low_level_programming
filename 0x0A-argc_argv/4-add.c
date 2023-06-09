@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		printf("%d\n", sum);
 		return (0);
 	}
-	else if (argc >= 3)
+	else if (argc >= 2)
 	{
 		for (i = 1; i <= argc - 1; i++)
 		{
