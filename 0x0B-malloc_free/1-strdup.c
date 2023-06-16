@@ -16,8 +16,7 @@
 
 char *_strdup(char *str)
 {
-	int i = 0;
-	int str_size = _strlen(str);
+	int str_size = _strlen(str) + 1;
 	char *ptr = (char *)malloc(sizeof(char) * str_size);
 
 	if (str == NULL)
@@ -32,11 +31,7 @@ char *_strdup(char *str)
 		}
 		else
 		{
-			while (*(str + i) != '\0')
-			{
-				*(ptr + i) = *(str + i);
-				i++;
-			}
+			_strcpy(ptr, str);
 
 			return (ptr);
 		}
@@ -60,4 +55,28 @@ int _strlen(char *s)
 	}
 
 	return (i);
+}
+
+/**
+ * _strcpy - Copies a string pointed to by `src` pointer including '\0'
+ * to the buffer pointed to by `dest` pointer.a
+ * @dest: Pointer that points to a Charcter value (string or array of chars.)
+ * that the `src` pointers copies the orginal string to it.
+ * @src: Pointer that points to a Character value  (string or array of chars.)
+ * that it copies to `dest`.
+ *
+ * Return: Base address to the array of Charcaters `dest`.
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int i;
+
+	for (i = 0; src[i] != '\0'; i++)
+	{
+		dest[i] = src[i];
+	}
+	dest[i] = '\0';
+
+	return (dest);
 }
