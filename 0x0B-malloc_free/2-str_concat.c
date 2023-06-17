@@ -24,7 +24,7 @@ char *str_concat(char *s1, char *s2)
 		/**
 		 * Treated as an empty string.
 		 */
-		*s1 = '\0';
+		s1 = "\0";
 	}
 
 	/**
@@ -36,10 +36,10 @@ char *str_concat(char *s1, char *s2)
 		/**
 		 * Treated as an empty string.
 		 */
-		*s2 = '\0';
+		s2 = "\0";
 	}
 
-	concat_len = _strlen(s1) + _strlen(s2) + 2;
+	concat_len = _strlen(s1) + _strlen(s2) + 1;
 	str_ptr = (char *)malloc(sizeof(char) * concat_len);
 
 	if (str_ptr == NULL)
