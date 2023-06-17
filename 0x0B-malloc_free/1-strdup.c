@@ -16,8 +16,9 @@
 
 char *_strdup(char *str)
 {
-	int str_size = _strlen(str) + 1;
-	char *ptr = (char *)malloc(sizeof(char) * str_size);
+	/* Checking if the `str` pointer is given a NULL Pointer
+	   Before continuing the program
+	*/
 
 	if (str == NULL)
 	{
@@ -25,6 +26,18 @@ char *_strdup(char *str)
 	}
 	else
 	{
+		/* Moved the initializations here, so it won't access the
+		   `str` pointer when it is pointing to a NULL and cause 
+		   Segmentation Fault.
+		*/
+
+		int str_size = _strlen(str) + 1;
+		char *ptr = (char *)malloc(sizeof(char) * str_size);
+
+		/* Checking if malloc function failed to allocate memory
+		   to `ptr` pointer.
+		*/
+
 		if (ptr == NULL)
 		{
 			return (NULL);
