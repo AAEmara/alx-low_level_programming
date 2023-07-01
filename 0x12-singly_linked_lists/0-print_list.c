@@ -15,10 +15,8 @@ size_t print_list(const list_t *h)
 
 	while (status)
 	{
-		if (h == NULL)
-			return (NULL);
 
-		else if (h->next == NULL)
+		if (h->next == NULL)
 		{
 			printf("[%d] %s\n", h->len, h->str);
 			sum++;
