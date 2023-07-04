@@ -20,10 +20,12 @@ int **alloc_grid(int width, int height)
 
 	if (grid == NULL)
 	{
+		free(grid);
 		return (NULL);
 	}
 	else if (width <= 0 || height <= 0)
 	{
+		free(grid);
 		return (NULL);
 	}
 	else
