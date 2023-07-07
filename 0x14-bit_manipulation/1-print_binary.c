@@ -14,8 +14,10 @@ void print_binary(unsigned long int n)
 {
 	unsigned long int base = 1;
 	int i;
+
 	if (n == 0)
 		_putchar('0');
+
 	while (n != 0)
 	{
 		if (n >= base)
@@ -24,18 +26,22 @@ void print_binary(unsigned long int n)
 			{
 				base = _pow_recursion(2, i);
 			}
+			i -= 2;
 			if (n < base)
 			{
-				i -= 2;
 				base = _pow_recursion(2, i);
 				n -= base;
+				_putchar('1');
 			}
 			else if (n == base)
-			{
-				
+			{	
 				n -= base;
+				_putchar('1');
+				for (; i >= 0; i--)
+				{
+					_putchar('0');
+				}
 			}
-			_putchar('1');
 		}
 		else if (n <= base)
 		{
