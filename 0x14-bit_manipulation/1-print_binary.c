@@ -1,5 +1,4 @@
 #include "main.h"
-#include <math.h>
 
 /**
  * print_binary - Prints a binary representation of a given number.
@@ -15,46 +14,25 @@ void print_binary(unsigned long int n)
 	unsigned long int base = 1;
 	int i;
 
+	for (i = 1; base < n; i++)
+	{
+		base = _pow_recursion(2, i);
+	}
+	i--;
+	base = _pow_recursion(2, i);
+
 	if (n == 0)
 		_putchar('0');
+	else if (base > n)
+		i--;
 
-	while (n != 0)
+	if (n != 0)
 	{
-		if (n >= base)
+		for (; i >= 0; i--)
 		{
-			for (i = 1; base < n; i++)
-			{
-				base = _pow_recursion(2, i);
-			}
-			i -= 2;
-			if (n < base)
-			{
-				base = _pow_recursion(2, i);
-				n -= base;
+			if ((n >> i) & 1)
 				_putchar('1');
-			}
-			else if (n == base)
-			{	
-				n -= base;
-				_putchar('1');
-				for (; i >= 0; i--)
-				{
-					_putchar('0');
-				}
-			}
-		}
-		else if (n <= base)
-		{
-			i -= 1;
-			base = _pow_recursion(2, i);
-			for (; base > n; i--)
-			{
-				_putchar('0');
-				base = _pow_recursion(2, i - 1);
-			}
-			_putchar('1');
-			n -= base;
-			if (n == 0 && i - 1 == 0)
+			else
 				_putchar('0');
 		}
 	}
