@@ -7,7 +7,7 @@
  * @index: Unsigned Integer value, represents the index of the bit that
  * will be changed (starting from index 0).
  *
- * Returns: -1 if Failed.
+ * Return: -1 if Failed.
  *	    1 if Succeeded.
  */
 
