@@ -14,35 +14,42 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	ssize_t bytes_written;
 	int fd;
+	ssize_t bytes_written;
 
 	if (filename == NULL)
 		return (-1);
 
-	fd = open(filename, O_CREAT | O_EXCL, S_IRUSR | S_IWUSR);
-	printf("Before fd < 0, fd = %d\n", fd);
-	if (fd < 0)
-	{
-		if (fd == EEXIST)
-			fd = creat(filename, O_CREAT | O_RDWR | O_TRUNC);
-	}
 	else
 	{
-		fd = creat(filename, S_IRUSR | S_IWUSR);
+		fd = open(filename, O_CREAT | O_EXCL | O_RDWR | O_TRUNC,
+			  S_IRUSR | S_IWUSR);
+
+		if (fd < 0)
+			return (-1);
+
+		else
+		{
+			if (text_content == NULL)
+			{
+				close(fd);
+				return (-1);
+			}
+			else
+			{
+				bytes_written = write(fd, text_content,
+						      strlen(text_content));
+				if (bytes_written == -1)
+				{
+					close(fd);
+					return (-1);
+				}
+				else
+				{
+					close(fd);
+					return (1);
+				}
+			}
+		}
 	}
-
-	if (text_content == NULL)
-		bytes_written = write(fd, text_content, 0);
-	else
-		bytes_written = write(fd, text_content, strlen(text_content));
-
-	if (bytes_written == 0)
-	{
-		close(fd);
-		return (-1);
-	}
-
-	close(fd);
-	return (1);
 }
