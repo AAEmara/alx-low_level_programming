@@ -20,6 +20,14 @@ int create_file(const char *filename, char *text_content)
 	if (filename == NULL)
 		return (-1);
 
+	else if (text_content == NULL)
+	{
+		fd = creat(filename, S_IRUSR | S_IWUSR);
+		if (fd < 0)
+			return (-1);
+		close(fd);
+		return (1);
+	}
 	else
 	{
 		fd = open(filename, O_CREAT | O_EXCL | O_RDWR | O_TRUNC,
@@ -30,15 +38,8 @@ int create_file(const char *filename, char *text_content)
 
 		else
 		{
-			if (text_content == NULL)
-			{
-				close(fd);
-				return (-1);
-			}
-			else
-			{
-				bytes_written = write(fd, text_content,
-						      strlen(text_content));
+			bytes_written = write(fd, text_content,
+					      strlen(text_content));
 				if (bytes_written == -1)
 				{
 					close(fd);
@@ -49,7 +50,6 @@ int create_file(const char *filename, char *text_content)
 					close(fd);
 					return (1);
 				}
-			}
 		}
 	}
 }
