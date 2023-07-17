@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strchr: Locates a character in a string.
+ * _strchr - Locates a character in a string.
  *
  * @s: Pointer to Character value, a string that will be compared to the given
  * character.
@@ -14,7 +14,7 @@ char *_strchr(char *s, char c)
 {
 	int i;
 
-	for (i = 0; s[i] != c; i++)
+	for (i = 0; s[i] != c || s[i] == '\0'; i++)
 		s++;
 
 	if (s[i] == '\0')
