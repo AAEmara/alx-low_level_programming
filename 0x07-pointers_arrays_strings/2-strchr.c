@@ -24,7 +24,11 @@ char *_strchr(char *s, char c)
 
 	if (*s == '\0')
 	{
-		return (NULL);
+		if (*s == '\0')
+			return (s);
+
+		else
+			return (NULL);
 	}
 	else
 		return (s);
