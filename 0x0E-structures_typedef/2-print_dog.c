@@ -9,13 +9,7 @@
 
 void print_dog(struct dog *d)
 {
-	if (d == NULL)
-	{
-		/**
-		 * Handling the pointer pointing to NULL by printing nothing
-		 */
-	}
-	else
+	if (d != NULL)
 	{
 		if (d->name == NULL)
 		{
