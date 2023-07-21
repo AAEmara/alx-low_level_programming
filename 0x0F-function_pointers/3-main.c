@@ -19,15 +19,17 @@ int main(int argc, char **argv)
 	char *op = argv[2];
 	int (*op_ptr)(int, int);
 
-	a = atoi(argv[1]);
-	b = atoi(argv[3]);
 
-	if (argc > 4)
+	if (argc != 4)
 	{
 		printf("Error\n");
 		return (98);
 	}
-	else if ((*op == '%' || *op == '/') && b == 0)
+
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+
+	if ((*op == '%' || *op == '/') && b == 0)
 	{
 		printf("Error\n");
 		return (100);
