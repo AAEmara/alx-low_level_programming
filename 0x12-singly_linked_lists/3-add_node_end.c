@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * list_t - Adds a new node of at the end of a linked list.
+ * add_node_end - Adds a new node of at the end of a linked list.
  *
  * @head: Pointer to a Pointer that points to a list_t Structure.
  * @str: Pointer to Character value, which is the string to be copied
