@@ -14,6 +14,9 @@ unsigned int binary_to_uint(const char *b)
 	int bin_len = _strlen(b) - 1, i = 0;
 	int value = 0;
 
+	if (bin_len > 63)
+		return (0);
+
 	while (b[i] != '\0')
 	{
 		if (b[i] == '1')
