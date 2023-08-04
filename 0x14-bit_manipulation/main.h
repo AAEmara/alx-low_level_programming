@@ -13,5 +13,6 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m);
 void _putchar(char c);
 int _pow_recursion(int x, int y);
 int _strlen(const char *s);
+int get_endianness(void);
 
 #endif
