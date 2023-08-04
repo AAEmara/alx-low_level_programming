@@ -2,11 +2,11 @@
 
 /**
  * binary_to_uint - converts a binary number to an unsigned integer.
- * 
+ *
  * @b: Pointer to a Constant Character Value.
  *
  * Return: Unsigned Integer Value that represents the decimal value
- * 	   Zero if there was a character not in [0-9] range.
+ *	   Zero if there was a character not in [0-9] range.
  */
 
 unsigned int binary_to_uint(const char *b)
