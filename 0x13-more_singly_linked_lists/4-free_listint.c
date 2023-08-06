@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * free_listsint - Frees a `listint_t` list.
+ * free_listint - Frees a `listint_t` list.
  *
  * @head: Pointer to a `listint_t` list, which represents the header of the
  * singly linked list given.
