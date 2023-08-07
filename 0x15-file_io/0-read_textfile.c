@@ -35,7 +35,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (bytes_read == -1)
 	{
 		free(buff);
-		return(0);
+		return (0);
 	}
 
 	buff_size = _strlen(buff);
