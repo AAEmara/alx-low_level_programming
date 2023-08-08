@@ -39,12 +39,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	buff_size = _strlen(buff);
 
-	if (buff_size != letters)
-		letters = buff_size;
+	if (buff_size > letters)
+		buff_size = letters;
 
-	bytes_written = write(STDIN_FILENO, buff, letters);
+	bytes_written = write(STDIN_FILENO, buff, buff_size);
 
-	if (bytes_written == -1 || bytes_written != (ssize_t) letters)
+	if (bytes_written == -1 || bytes_written != (ssize_t) buff_size)
 	{
 		close(fd);
 		free(buff);
