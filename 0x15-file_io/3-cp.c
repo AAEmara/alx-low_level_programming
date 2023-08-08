@@ -42,19 +42,23 @@ void cp(const char *file_from, const char *file_to)
 	fd_to = open(file_to, O_CREAT | O_TRUNC | O_WRONLY, mode);
 	fd_from = open(file_from, O_RDONLY);
 
-	if (fd_from == -1 || (b_read = read(fd_from, buff, 1024) == -1))
+	b_read = read(fd_from, buff, 1024);
+	if (fd_from == -1 || b_read == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n"
 			, file_from);
+		free(buff);
 		exit(98);
 	}
 
-	if (fd_to == -1 || (b_write = write(fd_to, buff, _strlen(buff)) == -1))
+	b_write = write(fd_to, buff, _strlen(buff));
+	if (fd_to == -1 || b_write == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n" , file_to);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
+		free(buff);
 		exit(99);
 	}
-	
+
 	close_to = close(fd_to);
 	close_from = close(fd_from);
 
@@ -67,6 +71,7 @@ void cp(const char *file_from, const char *file_to)
 		if (close_to == -1)
 			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n"
 				, fd_to);
+		free(buff);
 		exit(100);
 	}
 }
