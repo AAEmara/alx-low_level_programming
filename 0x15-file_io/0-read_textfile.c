@@ -34,8 +34,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (bytes_read == -1)
 	{
-		free(buff);
 		close(fd);
+		free(buff);
 		return (0);
 	}
 
@@ -46,7 +46,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	bytes_written = write(STDIN_FILENO, buff, letters);
 
-	if (bytes_written == -1)
+	if (bytes_written == -1 || bytes_written != (ssize_t) letters)
 	{
 		close(fd);
 		free(buff);
