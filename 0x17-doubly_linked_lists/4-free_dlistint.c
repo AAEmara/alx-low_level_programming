@@ -4,7 +4,7 @@
  * free_dlistint  - Frees a `dlistint_t` list.
  *
  * @head: Pointer to a `dlistint_t` list type, which represents the
- * 
+ *
  * Return: Nothing.
  */
 void free_dlistint(dlistint_t *head)
