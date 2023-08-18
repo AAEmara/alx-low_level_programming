@@ -31,13 +31,21 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		count++;
 	}
 
-	if (count != idx || curr == NULL)
+	if (count != idx)
 		return (NULL);
 
-	new_node->next = curr;
-	new_node->prev = curr->prev;
-	curr->prev->next = new_node;
-	curr->prev = new_node;
-
-	return (new_node);
+	if (*h == NULL)
+	{
+		*h = new_node;
+		curr = *h;	
+	}
+	else
+	{
+		new_node->next = curr;
+		new_node->prev = curr->prev;
+		curr->prev->next = new_node;
+		curr->prev = new_node;
+		curr = new_node;
+	}
+	return (curr);
 }
