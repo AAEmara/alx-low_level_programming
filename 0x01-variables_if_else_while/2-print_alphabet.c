@@ -1,19 +1,19 @@
 #include <stdio.h>
 
 /**
- * main - Prints the alphabet in lowercase, followed by a new line.
+ * main - Entry point
  *
- * Return: Always 0 (Success).
+ * Description: Prints alphabet in lowercase, followed by a newline.
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	char start = 'a';
+	int i;
 
-	while (start <= 'z')
-	{
-		putchar(start);
-		start++;
-	}
+	for (i = 'a'; i <= 'z'; i++)
+		putchar(i);
+
 	putchar('\n');
 
 	return (0);
