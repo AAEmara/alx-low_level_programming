@@ -16,7 +16,7 @@ int main(void)
 	{
 		putchar(i);
 		if (i == 'z')
-			i = 'A';
+			i = '@';
 	}
 
 	putchar('\n');
